@@ -21,9 +21,14 @@ class TypeSeeder extends Seeder
         ];
 
         foreach ($types as $oneType){
-            $type = new Type();
-            $type->name = $oneType;
-            $type->save();
+            $existingType = Type::where('name', $oneType)->first();
+
+            //in questo caso se non esiste lo crea nuovo
+            if (!$existingType) {
+                $type = new Type();
+                $type->name = $oneType;
+                $type->save();
         }
     }
+}
 }
