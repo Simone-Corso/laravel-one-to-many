@@ -10,6 +10,11 @@
         </div>
         <div class="col-12">
         <img src="{{$project->thumb}}" alt="{{$project->title}}">
+        <div>
+        <p>
+          {{ $project->type->name }}
+            </p>
+        </div>
             <p>
                 {{ $project->description }}
             </p>
