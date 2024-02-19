@@ -16,6 +16,7 @@ class Project extends Model
         'title',
         'thumb',
         'description',
+        'type_id',
 
     ];
 
