@@ -12,6 +12,13 @@ class Project extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'title',
+        'thumb',
+        'description',
+
+    ];
+
     public function type(){
         return $this->belongsto(Type::class);
     }
